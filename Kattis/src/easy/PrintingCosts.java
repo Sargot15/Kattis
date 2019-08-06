@@ -1,0 +1,116 @@
+package easy;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class PrintingCosts {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Map<Character,Integer> cost = new HashMap<Character,Integer>();
+		cost.put(' ', 0);
+		cost.put('&', 24);
+		cost.put(',', 7);
+		cost.put('2', 22);
+		cost.put('8', 23);
+		cost.put('>', 10);
+		cost.put('D', 26);
+		cost.put('J', 18);
+		cost.put('P', 23);
+		cost.put('V', 19);
+		cost.put('\\', 10);
+		cost.put('b', 25);
+		cost.put('h', 21);
+		cost.put('n', 18);
+		cost.put('t', 17);
+		cost.put('z', 19);
+		cost.put('!', 9);
+		cost.put('\'', 3);
+		cost.put('-', 7);
+		cost.put('3', 23);
+		cost.put('9', 26);
+		cost.put('?', 15);
+		cost.put('E', 26);
+		cost.put('K', 21);
+		cost.put('Q', 31);
+		cost.put('W', 26);
+		cost.put(']', 18);
+		cost.put('c', 17);
+		cost.put('i', 15);
+		cost.put('o', 20);
+		cost.put('u', 17);
+		cost.put('{', 18);
+		cost.put('"', 6);
+		cost.put('(', 12);
+		cost.put('.', 4);
+		cost.put('4', 21);
+		cost.put(':', 8);
+		cost.put('@', 32);
+		cost.put('F', 20);
+		cost.put('L', 16);
+		cost.put('R', 28);
+		cost.put('X', 18);
+		cost.put('^', 7);
+		cost.put('d', 25);
+		cost.put('j', 20);
+		cost.put('p', 25);
+		cost.put('v', 13);
+		cost.put('|', 12);
+		cost.put('#', 24);
+		cost.put(')', 12);
+		cost.put('/', 10);
+		cost.put('5', 27);
+		cost.put(';', 11);
+		cost.put('A', 24);
+		cost.put('G', 25);
+		cost.put('M', 28);
+		cost.put('S', 25);
+		cost.put('Y', 14);
+		cost.put('_', 8);
+		cost.put('e', 23);
+		cost.put('k', 21);
+		cost.put('q', 25);
+		cost.put('w', 19);
+		cost.put('}', 18);
+		cost.put('$', 29);
+		cost.put('*', 17);
+		cost.put('0', 22);
+		cost.put('6', 26);
+		cost.put('<', 10);
+		cost.put('B', 29);
+		cost.put('H', 25);
+		cost.put('N', 25);
+		cost.put('T', 16);
+		cost.put('Z', 22);
+		cost.put('`', 3);
+		cost.put('f', 18);
+		cost.put('l', 16);
+		cost.put('r', 13);
+		cost.put('x', 13);
+		cost.put('~', 9);
+		cost.put('%', 22);
+		cost.put('+', 13);
+		cost.put('1', 19);
+		cost.put('7', 16);
+		cost.put('=', 14);
+		cost.put('C', 20);
+		cost.put('I', 18);
+		cost.put('O', 26);
+		cost.put('U', 23);
+		cost.put('[', 18);
+		cost.put('a', 23);
+		cost.put('g', 30);
+		cost.put('m', 22);
+		cost.put('s', 21);
+		cost.put('y', 24);
+		while(sc.hasNext()){
+			String text = sc.nextLine();
+			int sum = 0;
+			for (int i = 0; i < text.length(); i++){
+				sum += cost.get(text.charAt(i));
+			}
+			System.out.println(sum);
+		}
+		sc.close();
+	}
+}
